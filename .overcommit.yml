@@ -1,0 +1,55 @@
+# Use this file to configure the Overcommit hooks you wish to use.
+# For a complete list of options, see: https://github.com/sds/overcommit
+
+PreCommit:
+  RuboCop:
+    enabled: true
+    description: "Run RuboCop linting"
+    command: ["bundle", "exec", "rubocop"]
+    on_warn: fail
+
+  RunTests:
+    enabled: true
+    description: "Run tests"
+    command: ["bundle", "exec", "rails", "test"]
+    on_warn: fail
+
+  Reek:
+    enabled: true
+    description: "Check for code smells using Reek"
+    command: ["bundle", "exec", "reek"]
+
+  # --- Security Scans ---
+  Brakeman:
+    enabled: true
+    description: "Scan for Rails security vulnerabilities"
+    command: ["bundle", "exec", "brakeman", "--quiet"]
+
+  BundleAudit:
+    enabled: true
+    description: "Check for vulnerable gem dependencies"
+    command: ["bundle", "exec", "bundle-audit", "check", "--update"]
+
+  # --- Rails & DB Consistency ---
+  DatabaseConsistency:
+    enabled: true
+    description: "Check consistency between models and database schema"
+    command: ["bundle", "exec", "database_consistency"]
+    quiet: false
+
+  # --- Basic Git Sanitization ---
+  TrailingWhitespace:
+    enabled: true
+    exclude:
+      - "**/db/structure.sql"
+      - "**/db/schema.rb"
+    quiet: false
+
+  MergeConflicts:
+    enabled: true
+    description: "Check for unresolved merge conflict markers"
+
+PostCheckout:
+  BundleInstall:
+    enabled: true
+    description: "Run bundle install if Gemfile changed"

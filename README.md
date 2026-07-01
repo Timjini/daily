@@ -1,25 +1,21 @@
-# README
+# Daily 
+I always wanted to have my own space where I could follow all what I do at once.
+we are easily distracted by logins and authentication, complicated UI and bloated UX, ads and notifications.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The aim of this project is to bring all my daily activities into one place and currently these are the main features, please do not hesitate to contribute or suggest new features.
 
-Things you may want to cover:
+## Public Features
+- Bloging and sharing
+- Selling Digital merch 
+- About Me section
+- My projects share information about the projects I work on
 
-* Ruby version
+## Private Features
+create a folder for the projects you work on and keep track of:
+- handbook of commands and scripts
+- visuals or documents related to the project
+- project members contact info.
+- browser built-in console for SSH connections
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# daily
+on personal basis:
+- personal notes, to-do lists, and automated reminders
